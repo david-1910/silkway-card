@@ -1,7 +1,7 @@
 import propertyImg from '../assets/property-sample.png'; 
 import heartIcon from '../assets/heart.svg';
 
-export default function BestOffers() {
+export default function PropertyDetail() {
     const properties = [
         {
             id: 1,
