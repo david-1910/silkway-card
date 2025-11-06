@@ -1,5 +1,5 @@
 import Header from "./components/Header";
-import BestOffers from "./components/PropertyDetail";
+import PropertyDetail from "./components/PropertyDetail";
 import WhyChooseUs from "./components/WhyChooseUs";
 import ContactUs from "./components/ContactUs";
 import Map from "./components/Map";
