@@ -4,7 +4,7 @@ import logocation from "../assets/location.svg";
 
 export default function Header() {
     return (
-        <div className="relative bg-blue-950 h-[100px]  md:h-[145px] w-full">
+        <div className="relative bg-blue-950 h-[100px]  md:h-[145px] w-full">daw
             <header className="flex  md:flex-row justify-between items-center px-4 md:px-8 lg:px-36 py-4 md:py-6 text-white w-full">
                 <nav className="flex flex-wrap justify-center gap-4 md:gap-6 lg:gap-10 text-xs md:text-sm mb-4 md:mb-0">
                     <a href="#" className="hover:text-gray-300 transition duration-200">О компании</a>

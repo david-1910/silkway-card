@@ -2,139 +2,94 @@ import propertyImg from '../assets/property-sample.png';
 import heartIcon from '../assets/heart.svg';
 
 export default function PropertyDetail() {
-    const properties = [
-        {
-            id: 1,
-            price: "50 000 у.е",
-            rooms: 2,
-            area: 58,
-            floor: "2/6",
-            address: "Ташкент, Юнусабадский район, массив Юнусабад, 5-й квартал",
-            image: propertyImg,
-            mortgage: true
-        },
-        {
-            id: 2,
-            price: "50 000 у.е",
-            rooms: 2,
-            area: 58,
-            floor: "2/6",
-            address: "Ташкент, Юнусабадский район, массив Юнусабад, 5-й квартал",
-            image: propertyImg,
-            mortgage: true
-        },
-        {
-            id: 3,
-            price: "50 000 у.е",
-            rooms: 2,
-            area: 58,
-            floor: "2/6",
-            address: "Ташкент, Юнусабадский район, массив Юнусабад, 5-й квартал",
-            image: propertyImg,
-            mortgage: true
-        },
-        {
-            id: 4,
-            price: "50 000 у.е",
-            rooms: 2,
-            area: 58,
-            floor: "2/6",
-            address: "Ташкент, Юнусабадский район, массив Юнусабад, 5-й квартал",
-            image: propertyImg,
-            mortgage: true
-        },
-        {
-            id: 5,
-            price: "50 000 у.е",
-            rooms: 2,
-            area: 58,
-            floor: "2/6",
-            address: "Ташкент, Юнусабадский район, массив Юнусабад, 5-й квартал",
-            image: propertyImg,
-            mortgage: true
-        },
-        {
-            id: 6,
-            price: "50 000 у.е",
-            rooms: 2,
-            area: 58,
-            floor: "2/6",
-            address: "Ташкент, Юнусабадский район, массив Юнусабад, 5-й квартал",
-            image: propertyImg,
-            mortgage: true
-        }
-    ];
+    const property = {
+        title: "2-комнатная квартира, 65 м2",
+        price: "50 000 у.е",
+        location: "Ташкент, Мирзо-Улугбекский р-н",
+        floor: "7 из 12",
+        totalArea: 65,
+        livingArea: 45,
+        rooms: 2,
+        buildYear: 2022,
+        bathroom: "раздельный",
+        balcony: "есть",
+        renovation: "евро",
+        ceilingHeight: "3 м",
+        elevator: "пассажирский + грузовой",
+        parking: "подземная / наземная",
+        image: propertyImg
+    };
 
     return (
-        <section className="py-8 md:py-12 lg:py-16">
-            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
-                {/* Заголовок */}
-                <div className="text-center mb-8 md:mb-12">
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 md:mb-3">
-                        Лучшие предложения месяца
-                    </h2>
-                    <p className="text-gray-600 text-base md:text-lg px-4">
-                        Подборка самых актуальных и выгодных предложений
-                    </p>
-                </div>
+        <div className="min-h-screen bg-gray-50">
+            {/* Хлебные крошки */}
+            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4">
+                <nav className="text-sm text-gray-600">
+                    <span>Главная</span>
+                    <span className="mx-2">›</span>
+                    <span>Каталог</span>
+                    <span className="mx-2">›</span>
+                    <span>Квартиры</span>
+                    <span className="mx-2">›</span>
+                    <span className="text-gray-900">2-комнатная, 65 м²</span>
+                </nav>
+            </div>
 
-                {/* Карточки объектов */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-                    {properties.map((property) => (
-                        <div 
-                            key={property.id} 
-                            className="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300"
-                        >
-                            {/* Изображение */}
-                            <div className="relative h-48 md:h-56 lg:h-64">
-                                <img 
-                                    src={property.image} 
-                                    alt="Недвижимость" 
-                                    className="w-full h-full object-cover"
-                                />
-                                {/* Кнопка избранного */}
-                                <button className="absolute top-3 right-3 md:top-4 md:right-4 bg-white/20 backdrop-blur-sm p-2 rounded-full hover:bg-white/60 transition-all duration-200">
-                                    <img 
-                                        src={heartIcon} 
-                                        alt="Избранное" 
-                                        className="w-4 h-4 md:w-5 md:h-5"
-                                    />
-                                </button>
-                            </div>
+            {/* Основной контент */}
+            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* Изображение */}
+                    <div className="w-full">
+                        <img 
+                            src={property.image} 
+                            alt={property.title}
+                            className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                        />
+                    </div>
 
-                            {/* Информация */}
-                            <div className="p-4 md:p-6">
-                                {/* Бейдж ипотеки */}
-                                {property.mortgage && (
-                                    <span className="inline-block bg-green-400 text-white text-xs md:text-sm px-3 md:px-4 py-1 rounded-full mb-3 md:mb-4">
-                                        Возможна ипотека
-                                    </span>
-                                )}
+                    {/* Информация */}
+                    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
+                        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                            {property.title}
+                        </h1>
 
-                                {/* Цена */}
-                                <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
-                                    {property.price}
-                                </h3>
-
-                                {/* Характеристики */}
-                                <p className="text-sm md:text-base text-gray-600 mb-2 md:mb-3">
-                                    {property.rooms} комн. кв | {property.area} м2 | {property.floor} этаж
-                                </p>
-
-                                {/* Адрес */}
-                                <p className="text-sm md:text-base text-gray-700 mb-4 md:mb-6 line-clamp-2">
-                                    {property.address}
-                                </p>
-
-                                {/* Кнопка */}
-                                <button className="w-full bg-blue-900 text-white py-2.5 md:py-3 rounded-xl hover:bg-blue-800 transition-all duration-200 font-medium text-sm md:text-base">
-                                    Подробнее
-                                </button>
-                            </div>
+                        {/* Характеристики */}
+                        <div className="space-y-3 mb-8 text-gray-700">
+                            <p><span className="font-medium">Локация:</span> {property.location}</p>
+                            <p><span className="font-medium">Этаж:</span> {property.floor}</p>
+                            <p>
+                                <span className="font-medium">Площадь:</span> {property.totalArea} м² 
+                                <span className="text-gray-600"> (жилая — {property.livingArea} м²)</span>
+                            </p>
+                            <p><span className="font-medium">Комнат:</span> {property.rooms}</p>
+                            <p><span className="font-medium">Год постройки:</span> {property.buildYear}</p>
+                            <p><span className="font-medium">Санузел:</span> {property.bathroom}</p>
+                            <p><span className="font-medium">Балкон:</span> {property.balcony}</p>
+                            <p><span className="font-medium">Ремонт:</span> {property.renovation}</p>
+                            <p><span className="font-medium">Высота потолков:</span> {property.ceilingHeight}</p>
+                            <p><span className="font-medium">Лифт:</span> {property.elevator}</p>
+                            <p><span className="font-medium">Парковка:</span> {property.parking}</p>
                         </div>
-                    ))}
+
+                        {/* Цена */}
+                        <div className="mb-8">
+                            <p className="text-3xl md:text-4xl font-bold text-gray-900">
+                                {property.price}
+                            </p>
+                        </div>
+
+                        {/* Кнопки */}
+                        <div className="grid grid-cols-2 gap-4">
+                            <button className="py-3 px-6 border-2 border-blue-900 text-blue-900 rounded-xl font-medium hover:bg-blue-50 transition-colors duration-200">
+                                Показать телефон
+                            </button>
+                            <button className="py-3 px-6 bg-blue-900 text-white rounded-xl font-medium hover:bg-blue-800 transition-colors duration-200">
+                                Оставить заявку
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
     );
 }
