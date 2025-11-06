@@ -21,9 +21,9 @@ export default function PropertyDetail() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50">
-            {/* Хлебные крошки */}
-            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-4">
+        <div className="min-h-screen">
+            {/* Табуляции  */}
+            <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-16 pb-0">
                 <nav className="text-sm text-gray-600">
                     <span>Главная</span>
                     <span className="mx-2">›</span>
@@ -39,22 +39,22 @@ export default function PropertyDetail() {
             <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     {/* Изображение */}
-                    <div className="w-full">
+                    <div className="w-[620px] h-[530px]">
                         <img 
                             src={property.image} 
                             alt={property.title}
-                            className="w-full h-auto rounded-2xl shadow-lg object-cover"
+                            className="w-full h-full rounded-2xl object-cover"
                         />
                     </div>
 
                     {/* Информация */}
-                    <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg">
-                        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+                    <div className="rounded-2xl p-6 md:pl-8 pt-0">
+                        <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
                             {property.title}
                         </h1>
 
                         {/* Характеристики */}
-                        <div className="space-y-3 mb-8 text-gray-700">
+                        <div className="space-y-2 mb-4 text-gray-700">
                             <p><span className="font-medium">Локация:</span> {property.location}</p>
                             <p><span className="font-medium">Этаж:</span> {property.floor}</p>
                             <p>

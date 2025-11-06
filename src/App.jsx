@@ -1,9 +1,8 @@
 import Header from "./components/Header";
 import PropertyDetail from "./components/PropertyDetail";
-import WhyChooseUs from "./components/WhyChooseUs";
-import ContactUs from "./components/ContactUs";
+import PropertyGallery from "./components/PropertyGallery";
+import PropertyCard from "./components/PropertyCard";
 import Map from "./components/Map";
-import SellProperty from "./components/SellProperty";
 import Footer from "./components/Footer";
 
 export default function App() {
@@ -11,10 +10,9 @@ export default function App() {
         <div className="min-h-screen">
             <Header />
             <PropertyDetail />
-            <WhyChooseUs />
-            <ContactUs />
+            <PropertyGallery />
             <Map />
-            <SellProperty />
+            <PropertyCard />
             <Footer />
         </div>
     );
